@@ -1,4 +1,12 @@
-natureofcode.com
-================
+## Перевод книги "THE NATURE OF CODE"
+---
+###Development
+- Install node.js
+- Install gulp
+- Install package and run
 
-Repo for web files for nature of code
+```bash
+$ npm i
+$ gulp
+
+```
