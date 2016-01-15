@@ -35,20 +35,6 @@
     <link rel="stylesheet" href="/stylesheets/fonts.css" type="text/css">
     <link rel="stylesheet" href="/stylesheets/html.css" type="text/css">
     <link rel="stylesheet" href="/stylesheets/code-html.css">
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-34673170-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
     <script>
     window.onload = function() {
         offsetUps = document.getElementsByClassName('offset-up');
@@ -65,34 +51,20 @@
 <body>
     <div id="navigator">
         <div id="navigator-inner">
-            <div id='nav-bar-wrap'>
-                <div id="mask"></div>
-                <div id="nav-bar">
-                    <h1><a href="/">THE <strong>NATURE</strong> OF CODE</a></h1>
-                    <h2>by Daniel Shiffman</h2>
-                    <a id="purchase-link" href="/">Buy this book in print</a> <a id="purchase-link" href="/">Buy this book as PDF</a>
-                </div>
-            </div>
             <div id="toc-holder">
                 <div id="toc-list">
                     <ul>
-                        <li><a href="/">Welcome</a></li>
-                        <li><a href="/acknowledgments">Acknowledgments</a></li>
-                        <li><a href="/dedication">Dedication</a></li>
-                        <li><a href="/preface">Preface</a></li>
-                        <li><a href="/introduction">Introduction</a></li>
-                        <li><a href="/chapter-1-vectors">1.  Vectors</a></li>
-                        <li><a href="/chapter-2-forces">2.  Forces</a></li>
-                        <li><a href="/chapter-3-oscillation">3.  Oscillation</a></li>
-                        <li><a href="/chapter-4-particle-systems">4.  Particle Systems</a></li>
-                        <li><a href="/chapter-5-physics-libraries">5.  Physics Libraries</a></li>
-                        <li><a href="/chapter-6-autonomous-agents">6.  Autonomous Agents</a></li>
-                        <li><a href="/chapter-7-cellular-automata">7.  Cellular Automata</a></li>
-                        <li><a href="/chapter-8-fractals">8.  Fractals</a></li>
-                        <li><a href="/chapter-9-the-evolution-of-code">9.  The Evolution of Code</a></li>
-                        <li><a href="/chapter-10-neural-networks">10.  Neural Networks</a></li>
-                        <li><a href="/further-reading">Further Reading</a></li>
-                        <li><a href="/index">Index</a></li>
+                        <li><a href="/">Вступление</a></li>
+                        <li><a href="/chapter-1-vectors">1.  Векторы</a></li>
+                        <li><a href="/chapter-2-forces">2.  Силы</a></li>
+                        <li><a href="/chapter-3-oscillation">3.  Колебания</a></li>
+                        <li><a href="/chapter-4-particle-systems">4.  Система частиц</a></li>
+                        <li><a href="/chapter-5-physics-libraries">5.  Физическая библиотека</a></li>
+                        <li><a href="/chapter-6-autonomous-agents">6.  Автономные субъекты</a></li>
+                        <li><a href="/chapter-7-cellular-automata">7.  Клеточные автоматы</a></li>
+                        <li><a href="/chapter-8-fractals">8.  Фракталы</a></li>
+                        <li><a href="/chapter-9-the-evolution-of-code">9.  Эволюция кода</a></li>
+                        <li><a href="/chapter-10-neural-networks">10.  Нейронные сети</a></li>
                     </ul>
                 </div>
             </div>
@@ -100,81 +72,77 @@
     </div>
     <div id="top">
         <div id="header">
-            <h1><a href="/">The <strong>Nature</strong> of Code</a></h1>
-            <h2>Daniel Shiffman</h2>
+            <h1><a href="/">Природа кода</a></h1>
         </div>
     </div>
     <div id="middle">
         <div id="container">
             <a id="_introduction" style="display: block;"></a>
-            <h2 id="introduction">Introduction</h2>
+            <h2 id="introduction">Вступление</h2>
             <blockquote>
-                “I am two with nature.”
+                “Я с природой одно целое.” (I am two with nature.)
                 <span class="attribution">
-— Woody Allen
+— Вуди Аллен
 </span>
             </blockquote>
-            <p>Here we are: the beginning. Well, almost the beginning. If it’s been a while since you’ve done any programming in Processing (or any math, for that matter), this introduction will get your mind back into computational thinking before we approach some of the more difficult and complex material.</p>
-            <p>In Chapter 1, we’re going to talk about the concept of a vector and how it will serve as the building block for simulating motion throughout this book. But before we take that step, let’s think about what it means for something to simply move around the screen. Let’s begin with one of the best-known and simplest simulations of motion—the random walk.</p>
+            <p>Если вы не представляете что такое Processing (или математика, если на то пошло), это вступление поможет вам разобраться, прежде чем мы перейдём к более трудному и сложному материалу. </p>
+            <p>В первой главе мы поговорим о концепции вектора и как мы его будем использовать для симуляции движения. Но прежде чем перейти к нему, давайте поговорим о том, как будет происходить движение по экрану. Начнём мы с довольно известного и простого вида движения-перемещение в случайном направлении.</p>
             <section>
                 <a id="intro_section1" style="display: block;"></a>
-                <h3 id="i1-random-walks">I.1 Random Walks</h3>
-                <p>
-                    <a id="random-walks-81e9ec60-253f-0130-ba0f-7cd1c3f718ad" style="display: block;"></a>
-                </p>
-                <p>Imagine you are standing in the middle of a balance beam. Every ten seconds, you flip a coin. Heads, take a step forward. Tails, take a step backward. This is a random walk—a path defined as a series of random steps. Stepping off that balance beam and onto the floor, you could perform a random walk in two dimensions by flipping that same coin twice with the following results:</p>
+                <h3 id="i1-random-walks">I.1 Перемещение в случайном направлении</h3>
+                <p>Представьте, что вы балансируете на середине бревна. Каждые десять секунд вы подбрасываете монетку. Орел, делаем шаг вперёд. Решка, делаем шаг назад. Это случайно перемещение на самом деле серия случайностей. Сойдя с бревна на пол вы может повторить это в двух измерениях, подбрасывая монетку с таким результатом:</p>
                 <div class="table">
                     <table>
                         <thead>
                             <tr>
-                                <th>Flip 1 </th>
-                                <th>Flip 2 </th>
-                                <th>Result</th>
+                                <th>Подбрасывание 1 </th>
+                                <th>Подбрасывание 2 </th>
+                                <th>Результат</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
-                                    <p>Heads</p>
+                                    <p>Орёл</p>
                                 </td>
                                 <td>
-                                    <p>Heads</p>
+                                    <p>Орёл</p>
                                 </td>
                                 <td>
-                                    <p>Step forward.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Heads</p>
-                                </td>
-                                <td>
-                                    <p>Tails</p>
-                                </td>
-                                <td>
-                                    <p>Step right.</p>
+                                    <p>Шаг вперёд.</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <p>Tails</p>
+                                    <p>Орёл</p>
                                 </td>
                                 <td>
-                                    <p>Heads</p>
+                                    <p>Решка</p>
                                 </td>
                                 <td>
-                                    <p>Step left.</p>
+                                    <p>Шаг вправо.</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <p>Tails</p>
+                                    <p>Решка</p>
                                 </td>
                                 <td>
-                                    <p>Tails</p>
+                                    <p>Орёл</p>
                                 </td>
                                 <td>
-                                    <p>Step backward.</p>
+                                    <p>Шаг влево.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Решка</p>
+                                </td>
+                                <td>
+                                    <p>Решка</p>
+                                </td>
+                                <td>
+                                    <p>Шаг назад.</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -1428,6 +1396,10 @@
             </div>
         </div>
     </div>
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+        ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
 </body>
 
 </html>
