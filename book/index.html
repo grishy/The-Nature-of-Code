@@ -89,8 +89,8 @@
             <p>В первой главе мы поговорим о концепции вектора и как мы его будем использовать для симуляции движения. Но прежде чем перейти к нему, давайте поговорим о том, как будет происходить движение по экрану. Начнём мы с довольно известного и простого вида движения-перемещение в случайном направлении.</p>
             <section>
                 <a id="intro_section1" style="display: block;"></a>
-                <h3 id="i1-random-walks">I.1 Перемещение в случайном направлении</h3>
-                <p>Представьте, что вы балансируете на середине бревна. Каждые десять секунд вы подбрасываете монетку. Орел, делаем шаг вперёд. Решка, делаем шаг назад. Это случайно перемещение на самом деле серия случайностей. Сойдя с бревна на пол вы может повторить это в двух измерениях, подбрасывая монетку с таким результатом:</p>
+                <h3 id="i1-random-walks">I.1 Перемещение в случайном направлении (Random walk)</h3>
+                <p>Представьте, что вы балансируете на середине бревна. Каждые десять секунд вы подбрасываете монетку. Орел, делаем шаг вперёд. Решка, делаем шаг назад. Это случайно перемещение на самом деле серия случайностей. Сойдя с бревна на пол вы может повторить это в двух измерениях, подбрасывая монетку и получая такой результат:</p>
                 <div class="table">
                     <table>
                         <thead>
@@ -148,25 +148,22 @@
                         </tbody>
                     </table>
                 </div>
-                <p>Yes, this may seem like a particularly unsophisticated algorithm. Nevertheless, random walks can be used to model phenomena that occur in the real world, from the movements of molecules in a gas to the behavior of a gambler spending a day at the casino. As for us, we begin this book studying a random walk with three goals in mind.</p>
-                <p>
-                    <a id="natural-phenomenamodeling-with-random-walks-81ea44f0-253f-0130-ba10-7cd1c3f718ad" style="display: block;"></a>
-                </p>
+                <p>Да, это может показаться простым алгоритмом, но тем не менее, перемещение в случайном направлении может использоваться для моделирования процессов из реального мира (движение молекул газа или выигрыша в казино). Мы изучаем это перемещение в книге по трём причинам:</p>
                 <div class="list">
                     <ol class="arabic">
                         <li>
                             <p>
-                                We need to review a programming concept central to this book—object-oriented programming. The random walker will serve as a template for how we will use object-oriented design to make things that move around a Processing window.
+                                Нам нужно рассмотреть популярную методологию программирования - ООП (Объектно-ориентированное программирование). Научимся использовать его для перемещения объектов в Processing.
                             </p>
                         </li>
                         <li>
                             <p>
-                                The random walk instigates the two questions that we will ask over and over again throughout this book: “How do we define the rules that govern the behavior of our objects?” and then, “How do we implement these rules in Processing?”
+                                Сподвигнет нас задать вопрос, который будет мучать нас на протяжении всей книги: “Как задать правила, по которым будет перемещаться объект?” а так же, “Как реализовать эти правила в Processing?”
                             </p>
                         </li>
                         <li>
                             <p>
-                                Throughout the book, we’ll periodically need a basic understanding of randomness, probability, and Perlin noise. The random walk will allow us to demonstrate a few key points that will come in handy later.
+                                Для дальнейшего изучения на нужны понимания в случайностях, вероятностях и шуме Перлина. Random walk продемонстрирует нам основные понятия, что поможет нам дальше.
                             </p>
                         </li>
                     </ol>
@@ -174,16 +171,10 @@
             </section>
             <section>
                 <a id="intro_section2" style="display: block;"></a>
-                <h3 id="i2-the-random-walker-class">I.2 The Random Walker Class</h3>
-                <p>
-                    <a id="object-oriented-programmingreview-of-81ebaf90-253f-0130-ba11-7cd1c3f718ad" style="display: block;"></a>
-                    <a id="processingreview-of-object-oriented-programming-with-81ebc450-253f-0130-ba12-7cd1c3f718ad" style="display: block;"></a>
-                </p>
-                <p>Let’s review a bit of object-oriented programming (OOP) first by building a <span class="klass">Walker</span> object. This will be only a cursory review. If you have never worked with OOP before, you may want something more comprehensive; I’d suggest stopping here and reviewing the <a href="http://processing.org/learning/objects/">basics on the Processing website</a> before continuing.</p>
-                <p>
-                    <a id="objectdefined-81ebeac0-253f-0130-ba13-7cd1c3f718ad" style="display: block;"></a>
-                    <a id="object-oriented-programmingobject-81ebffd0-253f-0130-ba14-7cd1c3f718ad" style="display: block;"></a>
-                </p>
+                <h3 id="i2-the-random-walker-class">I.2 Основной класс</h3>
+
+                <p>Начнём изучение ООП (Объектно-ориентированное программирование) с создания объекта, который будет перемещаться: <span class="klass">Walker</span>. Это будет только беглый обзор, и если вы не видели ООП раньше, то лучше остановиться и прочитать <a href="http://processing.org/learning/objects/">основы на сайте Processing</a></p>
+
                 <p>An <strong><em>object</em></strong> in Processing is an entity that has both data and functionality. We are looking to design a <span class="klass">Walker</span> object that both keeps track of its data (where it exists on the screen) and has the capability to perform certain actions (such as draw itself or take a step).</p>
                 <p>
                     <a id="class-processingdefined-81ec2560-253f-0130-ba15-7cd1c3f718ad" style="display: block;"></a>
