@@ -226,10 +226,6 @@
                     <div style="position: relative;clear:both;display:block;height:1px;width:100%;"></div>
                 </div>
                 <p>The second function directs the <span class="klass">Walker</span> object to take a step. Now, this is where things get a bit more interesting. Remember that floor on which we were taking random steps? Well, now we can use a Processing window in that same capacity. There are four possible steps. A step to the right can be simulated by incrementing <span class="var">x</span> (<span class="var">x</span>++); to the left by decrementing <span class="var">x</span> (<span class="var">x--</span>); forward by going down a pixel (<span class="var">y++</span>); and backward by going up a pixel (<span class="var">y--</span>). How do we pick from these four choices? Earlier we stated that we could flip two coins. In Processing, however, when we want to randomly choose from a list of options, we can pick a random number using <span class="function">random()</span>.</p>
-                <p>
-                    <a id="random-number-generatorsrandom-function-81ed4850-253f-0130-ba1b-7cd1c3f718ad" style="display: block;"></a>
-                    <a id="random-function-81ed5ba0-253f-0130-ba1c-7cd1c3f718ad" style="display: block;"></a>
-                </p>
                 <div class="source-code">
                     <a class="toggle" href="#" data-to-raw='Показать исходники' data-to-formatted='Показать отформатированный'>Показать исходники</a>
                     <textarea> void step() { // 0, 1, 2, or 3 int choice = int(random(4));</textarea>
