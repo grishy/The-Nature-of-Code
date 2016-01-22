@@ -274,17 +274,17 @@ _____________________________________________________________________________*/
 }
 
 #footer .one-third {
-  float: left;
+  /*float: left;*/
   font-size: 13px;
-  margin: 0 1%;
-  margin: 0 -webkit-calc(10px);
+  margin: 0 20%;
+/*  margin: 0 -webkit-calc(10px);
   margin: 0 -moz-calc(10x);
   margin: 0 calc(10px);
   width: 31%;
   width: -webkit-calc(33% - 20px);
   width: -moz-calc(33% - 20px);
   width: calc(33% - 20px);
-}
+*/}
 
 #footer p {
   font-size: 13px;
