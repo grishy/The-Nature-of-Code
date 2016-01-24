@@ -323,15 +323,15 @@
                     <img src="/imgs/intro/intro_01.png" alt="Nature of Code Image" />
                     <p class="caption">Рисунок I.1</p>
                 </div>
-                <p>To implement a <span class="klass">Walker</span> object that can step to any neighboring pixel (or stay put), we could pick a number between 0 and 8 (nine possible choices). However, a more efficient way to write the code would be to simply pick from three possible steps along the x-axis (-1, 0, or 1) and three possible steps along the y-axis.</p>
+                <p>Чтобы создать <span class="klass">Walker</span> объект, который может перемещаться на любой соседний пиксель (или остаться на месте), мы будет брать число между 0 и 8 (девять возможных вариантов). Однако, эффективнее будет написать код, который выбирает три возможных варианта для каждой из осей-вдоль оси x (-1, 0, или 1) и три возможных варианта для оси y.</p>
                 <div class="source-code">
                     <a class="toggle" href="#" data-to-raw='Показать исходники' data-to-formatted='Показать отформатированный'>Показать исходники</a>
-                    <textarea> void step() { //[full] Yields -1, 0, or 1 int stepx = int(random(3))-1; int stepy = int(random(3))-1; //[end] x += stepx; y += stepy; }
+                    <textarea> void step() { //[full] Выбирает -1, 0 или 1 int stepx = int(random(3))-1; int stepy = int(random(3))-1; //[end] x += stepx; y += stepy; }
                     </textarea>
                     <div class="code-block">
                         <div class='code-comment-pair no-comment'><code><pre><span class='one-line'>  <span class="kt">void</span> <span class="nf">step</span><span class="o">()</span> <span class="o">{</span></span></pre></code></div>
                         <div class='code-comment-pair stretch'>
-                            <div class='code-comment stretch'> Yields -1, 0, or 1</div><code><pre><span class='one-line'>    <span class="kt">int</span> <span class="n">stepx</span> <span class="o">=</span> <span class="kt">int</span><span class="o">(</span><span class="n">random</span><span class="o">(</span><span class="mi">3</span><span class="o">))-</span><span class="mi">1</span><span class="o">;</span></span>
+                            <div class='code-comment stretch'> Выбирает -1, 0 или 1</div><code><pre><span class='one-line'>    <span class="kt">int</span> <span class="n">stepx</span> <span class="o">=</span> <span class="kt">int</span><span class="o">(</span><span class="n">random</span><span class="o">(</span><span class="mi">3</span><span class="o">))-</span><span class="mi">1</span><span class="o">;</span></span>
 <span class='one-line'>    <span class="kt">int</span> <span class="n">stepy</span> <span class="o">=</span> <span class="kt">int</span><span class="o">(</span><span class="n">random</span><span class="o">(</span><span class="mi">3</span><span class="o">))-</span><span class="mi">1</span><span class="o">;</span></span></pre></code>
                             <div style='position:relative;clear:both;display:block;height:1px;width:100%;'></div>
                         </div>
@@ -341,15 +341,15 @@
                     </div>
                     <div style="position: relative;clear:both;display:block;height:1px;width:100%;"></div>
                 </div>
-                <p>Taking this further, we could use floating point numbers (i.e. decimal numbers) for <span class="var">x</span> and <span class="var">y</span> instead and move according to an arbitrary random value between -1 and 1.</p>
+                <p>Учитывая это, мы могли бы использовать числа с плавающе запятой (т.е. десятичные числа) для <span class="var">x</span> и <span class="var">y</span> и брать число между -1 и 1.</p>
                 <div class="source-code">
                     <a class="toggle" href="#" data-to-raw='Показать исходники' data-to-formatted='Показать отформатированный'>Показать исходники</a>
-                    <textarea> void step() { //[full] Yields any floating point number between -1.0 and 1.0 float stepx = random(-1, 1); float stepy = random(-1, 1); //[end] x += stepx; y += stepy; }
+                    <textarea> void step() { //[full] Выбрать любое десятичное число между -1.0 и 1.0 float stepx = random(-1, 1); float stepy = random(-1, 1); //[end] x += stepx; y += stepy; }
                     </textarea>
                     <div class="code-block">
                         <div class='code-comment-pair no-comment'><code><pre><span class='one-line'>  <span class="kt">void</span> <span class="nf">step</span><span class="o">()</span> <span class="o">{</span></span></pre></code></div>
                         <div class='code-comment-pair stretch'>
-                            <div class='code-comment stretch'> Yields any floating point number between -1.0 and 1.0</div><code><pre><span class='one-line'>    <span class="kt">float</span> <span class="n">stepx</span> <span class="o">=</span> <span class="n">random</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span></span>
+                            <div class='code-comment stretch'> Выбрать любое десятичное число между -1.0 и 1.0</div><code><pre><span class='one-line'>    <span class="kt">float</span> <span class="n">stepx</span> <span class="o">=</span> <span class="n">random</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span></span>
 <span class='one-line'>    <span class="kt">float</span> <span class="n">stepy</span> <span class="o">=</span> <span class="n">random</span><span class="o">(-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span></span></pre></code>
                             <div style='position:relative;clear:both;display:block;height:1px;width:100%;'></div>
                         </div>
@@ -359,30 +359,27 @@
                     </div>
                     <div style="position: relative;clear:both;display:block;height:1px;width:100%;"></div>
                 </div>
-                <p>All of these variations on the “traditional” random walk have one thing in common: at any moment in time, the probability that the <span class="klass">Walker</span> will take a step in a given direction is equal to the probability that the <span class="klass">Walker</span> will take a step in any direction. In other words, if there are four possible steps, there is a 1 in 4 (or 25%) chance the <span class="klass">Walker</span> will take any given step. With nine possible steps, it’s a 1 in 9 (or 11.1%) chance.</p>
+                <p>Все вариации "традиционного" перемещения в случайном направлении имеют одну общую черту: в любой момент времени, вероятность того, что <span class="klass">Walker</span> сделает шаг в одном направлении равна вероятность шага <span class="klass">Walker</span> в любом другом направлении. Другими словами, если у нас четыре варианта перемещения, то шанс 1 из 4 (или 25%), что <span class="klass">Walker</span> сделает шаг в определённом направлении. С девятью возможными шагами шанс будет 1 к 9 (или 11.1%).</p>
                 <p>
-                    <a id="random-number-generatorsuniform-number-distributions-and-81ee8340-253f-0130-ba1f-7cd1c3f718ad" style="display: block;"></a>
-                    <a id="uniform-number-distributions-81ee96f0-253f-0130-ba20-7cd1c3f718ad" style="display: block;"></a>
-                </p>
-                <p>Conveniently, this is how the <span class="function">random()</span> function works. Processing’s random number generator (which operates behind the scenes) produces what is known as a “uniform” distribution of numbers. We can test this distribution with a Processing sketch that counts each time a random number is picked and graphs it as the height of a rectangle.</p>
+                <p>Глаз радуется, когда смотришь как работает функция <span class="function">random()</span> (Перев. Я не придумал как это перевести :) ). Processing генератор случайных чисел (который работает за кулисами) работает по принципу “равномерного” распределения чисел. Мы можем проверить распределение чисел в Processing каждый раз вычисляя случайное число и выбирая его в качестве высоты для прямоугольника.</p>
                 <div class="image-container screenshot">
                     <canvas data-processing-sources="/processingjs/intro/_I_2_RandomDistribution/_I_2_RandomDistribution.pde" class="screenshot">
                         <p>Ваш браузер не поддерживает canvas тег.</p>
                     </canvas>
                     <div class="sketch-controls">
-                        <button class="reset">RESET</button>
-                        <button class="pause">PAUSE</button>
+                        <button class="reset">СБРОС</button>
+                        <button class="pause">ПАУЗА</button>
                     </div>
                 </div>
                 <p>
-                    <a id="intro_example2" style="display: block;"></a><span class="example">Example I.2: Random number distribution</span></p>
+                    <a id="intro_example2" style="display: block;"></a><span class="example">Пример I.2: Распределение случайных чисел</span></p>
                 <div class="source-code">
                     <a class="toggle" href="#" data-to-raw='Показать исходники' data-to-formatted='Показать отформатированный'>Показать исходники</a>
-                    <textarea>// An array to keep track of how often random numbers are picked int[] randomCounts; void setup() { size(640,240); randomCounts = new int[20]; } void draw() { background(255); // Pick a random number and increase the count. int index = int(random(randomCounts.length)); randomCounts[index]++; stroke(0); fill(175); int w = width/randomCounts.length; //[full] Graphing the results for (int x = 0; x
+                    <textarea>// Массив в котором находятся все выбранные случайные числа int[] randomCounts; void setup() { size(640,240); randomCounts = new int[20]; } void draw() { background(255); // Выбрать случайный элемент в массиве. int index = int(random(randomCounts.length)); randomCounts[index]++; stroke(0); fill(175); int w = width/randomCounts.length; //[full] Отобразить результаты for (int x = 0; x
                         < randomCounts.length; x++) { rect(x*w,height-randomCounts[x],w-1,randomCounts[x]); } //[end] }</textarea>
                             <div class="code-block">
                                 <div class='code-comment-pair '>
-                                    <div class='code-comment '>An array to keep track of how often random numbers are picked</div><code><pre><span class='one-line'><span class="kt">int</span><span class="o">[]</span> <span class="n">randomCounts</span><span class="o">;</span></span>
+                                    <div class='code-comment '>Массив в котором находятся все выбранные случайные числа.</div><code><pre><span class='one-line'><span class="kt">int</span><span class="o">[]</span> <span class="n">randomCounts</span><span class="o">;</span></span>
 <span class='one-line'> </span>
 <span class='one-line'><span class="kt">void</span> <span class="nf">setup</span><span class="o">()</span> <span class="o">{</span></span>
 <span class='one-line'>  <span class="n">size</span><span class="o">(</span><span class="mi">640</span><span class="o">,</span><span class="mi">240</span><span class="o">);</span></span>
@@ -393,14 +390,14 @@
 <span class='one-line'>  <span class="n">background</span><span class="o">(</span><span class="mi">255</span><span class="o">);</span></span>
 <span class='one-line'> </span></pre></code></div>
                                 <div class='code-comment-pair '>
-                                    <div class='code-comment '>Pick a random number and increase the count.</div><code><pre><span class='one-line'>  <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="kt">int</span><span class="o">(</span><span class="n">random</span><span class="o">(</span><span class="n">randomCounts</span><span class="o">.</span><span class="na">length</span><span class="o">));</span></span>
+                                    <div class='code-comment '>Выбрать случайный элемент в массиве.</div><code><pre><span class='one-line'>  <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="kt">int</span><span class="o">(</span><span class="n">random</span><span class="o">(</span><span class="n">randomCounts</span><span class="o">.</span><span class="na">length</span><span class="o">));</span></span>
 <span class='one-line'>  <span class="n">randomCounts</span><span class="o">[</span><span class="n">index</span><span class="o">]++;</span></span>
 <span class='one-line'> </span>
 <span class='one-line'>  <span class="n">stroke</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span></span>
 <span class='one-line'>  <span class="n">fill</span><span class="o">(</span><span class="mi">175</span><span class="o">);</span></span>
 <span class='one-line'>  <span class="kt">int</span> <span class="n">w</span> <span class="o">=</span> <span class="n">width</span><span class="o">/</span><span class="n">randomCounts</span><span class="o">.</span><span class="na">length</span><span class="o">;</span></span></pre></code></div>
                                 <div class='code-comment-pair stretch'>
-                                    <div class='code-comment stretch'> Graphing the results</div><code><pre><span class='one-line'>  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">randomCounts</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">x</span><span class="o">++)</span> <span class="o">{</span></span>
+                                    <div class='code-comment stretch'> Отобразить результаты</div><code><pre><span class='one-line'>  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">randomCounts</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">x</span><span class="o">++)</span> <span class="o">{</span></span>
 <span class='one-line'>    <span class="n">rect</span><span class="o">(</span><span class="n">x</span><span class="o">*</span><span class="n">w</span><span class="o">,</span><span class="n">height</span><span class="o">-</span><span class="n">randomCounts</span><span class="o">[</span><span class="n">x</span><span class="o">],</span><span class="n">w</span><span class="o">-</span><span class="mi">1</span><span class="o">,</span><span class="n">randomCounts</span><span class="o">[</span><span class="n">x</span><span class="o">]);</span></span>
 <span class='one-line'>  <span class="o">}</span></span></pre></code>
                                     <div style='position:relative;clear:both;display:block;height:1px;width:100%;'></div>
@@ -409,19 +406,19 @@
                             </div>
                             <div style="position: relative;clear:both;display:block;height:1px;width:100%;"></div>
                 </div>
-                <p>The above screenshot shows the result of the sketch running for a few minutes. Notice how each bar of the graph differs in height. Our sample size (i.e. the number of random numbers we’ve picked) is rather small and there are some occasional discrepancies, where certain numbers are picked more often. Over time, with a good random number generator, this would even out.</p>
+                <p>В окне выше мы может видеть результат работы. Обратите внимание, что каждая часть графика отличается в высоту. Наша размер выборки (т.е. число случайных чисел) довольно мал и там могут встречаться некоторые расхождения, когда отдельные блоки выбиваются вверх. Со временем, с хорошей генератором случайных чисел, это будет выравнивать.</p>
                 <p>
                     <a id="pseudo-random-numbers-81eed080-253f-0130-ba21-7cd1c3f718ad" style="display: block;"></a>
                     <a id="random-number-generatorspseudo-random-numbers-81eee240-253f-0130-ba22-7cd1c3f718ad" style="display: block;"></a>
                 </p>
                 <div class="note">
-                    <h4 id="pseudo-random-numbers">Pseudo-Random Numbers</h4>
-                    <p>The random numbers we get from the <span class="function">random()</span> function are not truly random; therefore they are known as “pseudo-random.” They are the result of a mathematical function that simulates randomness. This function would yield a pattern over time, but that time period is so long that for us, it’s just as good as pure randomness!</p>
+                    <h4 id="pseudo-random-numbers">Генератор псевдослучайных чисел</h4>
+                    <p>Число, которое мы получаем от функции <span class="function">random()</span> не является действительно случайным, поэтому они извесны как “псевдо-случайные.” Они являются результатом математической функции, которая моделирует "случайность". У этой функции можно найти закономерность вывода ответа, но он на столько большой, что для нас это так же хорошо, как чистая случайность!</p>
                 </div>
                 <div class="example">
                     <a id="intro_exercise1" style="display: block;"></a>
-                    <h4 id="exercise-i1">Exercise I.1</h4>
-                    <p>Create a random walker that has a tendency to move down and to the right. (We’ll see the solution to this in the next section.)</p>
+                    <h4 id="exercise-i1">Упражнение I.1</h4>
+                    <p>Создать движение, в котором <span class="klass">Walker</span> передвигается в большенстве случаев в одном направлнии. (Мы увидим решение этого в следующем разделе.)</p>
                 </div>
             </section>
             <section>
@@ -561,8 +558,8 @@
                         <p>Ваш браузер не поддерживает canvas тег.</p>
                     </canvas>
                     <div class="sketch-controls">
-                        <button class="reset">RESET</button>
-                        <button class="pause">PAUSE</button>
+                        <button class="reset">СБРОС</button>
+                        <button class="pause">ПАУЗА</button>
                     </div>
                 </div>
                 <p>
@@ -766,8 +763,8 @@
                         <p>Ваш браузер не поддерживает canvas тег.</p>
                     </canvas>
                     <div class="sketch-controls">
-                        <button class="reset">RESET</button>
-                        <button class="pause">PAUSE</button>
+                        <button class="reset">СБРОС</button>
+                        <button class="pause">ПАУЗА</button>
                     </div>
                 </div>
                 <p>
@@ -1154,8 +1151,8 @@
                             <p>Ваш браузер не поддерживает canvas тег.</p>
                         </canvas>
                         <div class="sketch-controls">
-                            <button class="reset">RESET</button>
-                            <button class="pause">PAUSE</button>
+                            <button class="reset">СБРОС</button>
+                            <button class="pause">ПАУЗА</button>
                         </div>
                     </div>
                     <p>
@@ -1310,8 +1307,8 @@
                             <p>Ваш браузер не поддерживает canvas тег.</p>
                         </canvas>
                         <div class="sketch-controls">
-                            <button class="reset">RESET</button>
-                            <button class="pause">PAUSE</button>
+                            <button class="reset">СБРОС</button>
+                            <button class="pause">ПАУЗА</button>
                         </div>
                         <p class="caption">Figure I.12: Tree with Perlin noise</p>
                     </div>
@@ -1321,8 +1318,8 @@
                             <p>Ваш браузер не поддерживает canvas тег.</p>
                         </canvas>
                         <div class="sketch-controls">
-                            <button class="reset">RESET</button>
-                            <button class="pause">PAUSE</button>
+                            <button class="reset">СБРОС</button>
+                            <button class="pause">ПАУЗА</button>
                         </div>
                         <p class="caption">Figure I.13: Flow field with Perlin noise</p>
                     </div>
