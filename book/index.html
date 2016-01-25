@@ -418,28 +418,17 @@
                 <div class="example">
                     <a id="intro_exercise1" style="display: block;"></a>
                     <h4 id="exercise-i1">Упражнение I.1</h4>
-                    <p>Создать движение, в котором <span class="klass">Walker</span> передвигается в большенстве случаев в одном направлнии. (Мы увидим решение этого в следующем разделе.)</p>
+                    <p>Создать движение, в котором <span class="klass">Walker</span> передвигается в большенстве случаев в одном направлнии. (Мы увидим решение этого в следующем разделе)</p>
                 </div>
             </section>
             <section>
                 <a id="intro_section3" style="display: block;"></a>
-                <h3 id="i3-probability-and-non-uniform-distributions">I.3 Probability and Non-Uniform Distributions</h3>
-                <p>
-                    <a id="natural-phenomenamodeling-with-the-random-function-81ef2bd0-253f-0130-ba23-7cd1c3f718ad" style="display: block;"></a>
-                    <a id="non-uniform-distributionsprobability-and-81ef4510-253f-0130-ba24-7cd1c3f718ad" style="display: block;"></a>
-                    <a id="distributions-non-uniformprobability-and-81ef59b0-253f-0130-ba25-7cd1c3f718ad" style="display: block;"></a>
-                    <a id="probabilitynon-uniform-distributions-and-81ef6fd0-253f-0130-ba26-7cd1c3f718ad" style="display: block;"></a>
-                    <a id="random-number-generatorsnon-uniform-distributions-creating-81ef8520-253f-0130-ba27-7cd1c3f718ad" style="display: block;"></a>
-                    <a id="random-functionnatural-phenomena-modeling-with-81ef9a50-253f-0130-ba28-7cd1c3f718ad" style="display: block;"></a>
-                </p>
-                <p>Remember when you first started programming in Processing? Perhaps you wanted to draw a lot of circles on the screen. So you said to yourself: “Oh, I know. I’ll draw all these circles at random locations, with random sizes and random colors.” In a computer graphics system, it’s often easiest to seed a system with randomness. In this book, however, we’re looking to build systems modeled on what we see in nature. Defaulting to randomness is not a particularly thoughtful solution to a design problem—in particular, the kind of problem that involves creating an organic or natural-looking simulation.</p>
-                <p>
-                    <a id="probability-of-the-fittest-81efb480-253f-0130-ba29-7cd1c3f718ad" style="display: block;"></a>
-                </p>
-                <p>With a few tricks, we can change the way we use <span class="function">random()</span> to produce “non-uniform” distributions of random numbers. This will come in handy throughout the book as we look at a number of different scenarios. When we examine genetic algorithms, for example, we’ll need a methodology for performing “selection”—which members of our population should be selected to pass their DNA to the next generation? Remember the concept of survival of the fittest? Let’s say we have a population of monkeys evolving. Not every monkey will have a equal chance of reproducing. To simulate Darwinian evolution, we can’t simply pick two random monkeys to be parents. We need the more “fit” ones to be more likely to be chosen. We need to define the “probability of the fittest.” For example, a particularly fast and strong monkey might have a 90% chance of procreating, while a weaker one has only a 10% chance.</p>
-                <p>
-                    <a id="probability-81f12eb0-253f-0130-ba2a-7cd1c3f718ad" style="display: block;"></a>
-                </p>
+                <h3 id="i3-probability-and-non-uniform-distributions">I.3 Вероятность и  неоднородное распределение</h3>
+               
+                <p>Вы помните, как впервые начали программировать в Processing? Возможно, вы хотели нарисовать много кругов на экране и сказали сами себе: “О, я знаю. Я нарисую все эти круги в случайных координатах, со случайным цветом и размером.” В компьютерной графике, зачастую проще всего заполнить систему случайными значениями. В этой книге, однако, мы посмотрим, как смоделировать систему, похожую на то, что мы видим природе. Это может понадобиться для решения проблем связанных с можелированием органической или естестренных процессов.</p>
+
+                <p>С помощью нескольких трюков, мы может изменить результат <span class="function">random()</span> для получания “неоднородное” распределения случайных чисел. Это понадобится на протяжении всей книги, где будет рассмотренно много сценариев применения. Например, когда мы исследуем генетические алгоритмы нам нужно будет производить “выбор”—какая особь будет выбрана, чтобы передать своё ДНК следующему поколению? Помните, что выживает сильнейший? Допустим, у нас есть популяция обезьян. Не каждая обезьянка раст потомство. Для симуляции Дарвиновской эволюции, мы не может просто брать две случайные обезьяны. На нужно, чтобы более “подходяцие” обезьяны были выбранны, нам нужно определять сильнейших. Например, наиболее быстрые и сильные обезьяны могут иметь потомство в 90%, тогда как слабые только в 10%.</p>
+
                 <p>Let’s pause here and take a look at probability’s basic principles. First we’ll examine single event probability, i.e. the likelihood that a given event will occur.</p>
                 <p>If you have a system with a certain number of possible outcomes, the probability of the occurrence of a given event equals the number of outcomes that qualify as that event divided by the total number of all possible outcomes. A coin toss is a simple example—it has only two possible outcomes, heads or tails. There is only one way to flip heads. The probability that the coin will turn up heads, therefore, is one divided by two: 1/2 or 50%.</p>
                 <p>Take a deck of fifty-two cards. The probability of drawing an ace from that deck is:</p>
