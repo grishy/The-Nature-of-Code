@@ -18,6 +18,7 @@
 
 ```bash
 $ npm i
+$ npm install gulp
 $ npm install gulp-cli -g
 $ gulp
 ```
