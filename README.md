@@ -7,19 +7,19 @@
 
 
 ### Версия взята от Jan 2016
-Вообще то от 2015, но там изменений нет и по Jan 2016 и по July 2017. :smile:   
+Вообще то от 2015, но там изменений нет и по Jan 2016 и по July 2017. :smile:  
+**UPD** От 07.05.2018 - перешёл на версию The Nature Of Code v2.0a 
 [Оригинал](http://natureofcode.com/)
 
 ### Development
-- Font `Gregor`
-- Install node.js
-- Install gulp
+- Font ~~`Gregor`~~ `PT Serif`, `PT Sans`
+- Install `node.js`
+- Install `gulp`
 - Install package and run
 
 ```bash
-$ npm i
-$ npm install gulp
 $ npm install gulp-cli -g
+$ npm i
 $ gulp
 ```
 

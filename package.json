@@ -1,8 +1,8 @@
 {
-  "name": "The-Nature-of-Code",
+  "name": "natureofcode-ru",
   "version": "1.0.0",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-connect": "^2.2.0"
+    "gulp-connect": "^5.5.0"
   }
 }

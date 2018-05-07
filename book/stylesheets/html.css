@@ -47,6 +47,7 @@ a {
 }
 
 #top #header h1 {
+  font-family: "ProximaNova-Regular";
   font-size: 48px;
   letter-spacing: 0.271em;
   margin-bottom: 0.25em;
@@ -62,6 +63,7 @@ a {
 }
 
 #top #header h2 {
+  font-family: "ProximaNova-Regular";
   color: #ffffff;
   font-size: 29.666px;
   letter-spacing: 0.271em;
@@ -145,6 +147,7 @@ _____________________________________________________________________________*/
 #navigator,
 #navigator h1,
 #navigator h2 {
+  font-family: "ProximaNova-Regular";
 }
 
 #navigator h1 {
@@ -172,6 +175,7 @@ _____________________________________________________________________________*/
 }
 
 #navigator strong {
+  font-family: "ProximaNova-Bold";
 }
 
 #table-of-contents {
@@ -221,6 +225,7 @@ _____________________________________________________________________________*/
 
 /* Chapter Titles*/
 #toc-list>ul>li {
+  font-family: "ProximaNova-Bold";
   font-size: 13px;
   margin: 10px 0 8px;
   text-transform: uppercase;
@@ -270,21 +275,22 @@ _____________________________________________________________________________*/
 #footer h4 {
   color: #000000;
   font-size: 15px;
+  font-family: "ProximaNova-Regular";
   margin-bottom: 0.8em;
 }
 
 #footer .one-third {
-  /*float: left;*/
+  float: left;
   font-size: 13px;
-  margin: 0 20%;
-/*  margin: 0 -webkit-calc(10px);
+  margin: 0 1%;
+  margin: 0 -webkit-calc(10px);
   margin: 0 -moz-calc(10x);
   margin: 0 calc(10px);
   width: 31%;
   width: -webkit-calc(33% - 20px);
   width: -moz-calc(33% - 20px);
   width: calc(33% - 20px);
-*/}
+}
 
 #footer p {
   font-size: 13px;
@@ -368,6 +374,7 @@ _____________________________________________________________________________ */
 
 table {
   font-size: 8pt;
+  font-family: "ProximaNova-Regular";
   color: #606060;
   border-collapse: collapse;
   width: 100%;
@@ -387,6 +394,7 @@ table th {
   font-size: 9pt;
   border: 1px solid #D1D1D1;
   background-color: rgb(92%,92%,92%);
+  font-family: "ProximaNova-Bold";
   font-style: normal;
 }
 
@@ -432,6 +440,7 @@ dl {
 }
 
 dt, dd {
+  font-family: "ProximaNova-Regular";
   font-size: 16px;
   float: left;
   line-height: 1em;
@@ -476,6 +485,7 @@ h2 + blockquote span.attribution {
 }
 
 blockquote {
+  font-family: "ProximaNova-Regular";
   font-style: italic;
   margin: 12px 40px 12px 40px;
   font-size: 12pt;
@@ -514,6 +524,7 @@ canvas:focus {
   color: white;
   padding: 5px 8px;
   font-size: 100%;
+  font-family: "ProximaNova-Regular";
 }
 
 .sketch-controls button:hover {
@@ -534,6 +545,7 @@ _____________________________________________________________________________ */
 
 span.highlight {
   background-color: #E9E9E9;
+  font-family: "ProximaNova-SemiBold";
   font-size: 16pt;
   display: block;
   padding: 0.8em;
@@ -582,6 +594,7 @@ div.example h3[id],
 div.example h4[id],
 div.example h5[id],
 div.example h6[id] {
+  font-family: "ProximaNova-Regular";
   text-align: right;
   margin: 1em 0.9em;
   position: absolute;
@@ -630,6 +643,7 @@ div.example h6[id] {
 
 /* Style example heading */
 span.example {
+  font-family: "ProximaNova-Bold";
   background-color: #CACCCB;
   clear: both;
   display: block;
@@ -684,6 +698,7 @@ img {
 
 .image-container .caption {
   color: #222;
+  font-family: "ProximaNova-Regular";
   font-size: 100%; /* 100% == 13px when not inside a p tag */
   border: 0;
 }
@@ -892,7 +907,6 @@ a relatively positioned parent. */
   #navigator {
     position: relative;
     margin: 0 ;
-    padding-bottom: 100;
   }
 
   #nav-bar-wrap {
