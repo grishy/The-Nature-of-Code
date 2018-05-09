@@ -13,6 +13,7 @@
 
 ### Development
 - Font ~~`Gregor`~~ `PT Serif`, `PT Sans`
+- Screeshot `Arial` 28
 - Install `node.js`
 - Install `gulp`
 - Install package and run
